@@ -1,4 +1,4 @@
-// Fetch a random landscape nature photo from Unsplash API
+// Fetch a random landscape nature photo
 fetch(
     "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
   )
@@ -6,7 +6,7 @@ fetch(
     .then((data) => {
       console.log(data.urls.regular);
   
-      // Set the fetched image as the background of the body and update author info
+      // Make the fetched image as the background of the body and update author info
       document.body.style.backgroundImage = `url(${data.urls.regular})`;
       document.getElementById("author").textContent = `By: ${data.user.name}`;
     })
